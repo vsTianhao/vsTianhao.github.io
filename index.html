@@ -3,18 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Tian Hao CodeFactory</title>
-		<script type="text/javascript" src="jquery-2.2.4.js"></script>
-		<script type="text/javascript" src="common-1.0.js"></script>
+		<link rel="stylesheet" href="css/master.css">
+		<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+		<script type="text/javascript" src="js/common-1.0.js"></script>
 		<script type="text/javascript">
 				console.log('init');
 				$(function () {
+					$('#command').keydown(function (e) {
+							if (e.keyCode == 13) { handle(); }
+					});
 
+					$('#input').change(function () { handle(); });
+
+					var handle = function () {
+						$('#output').html($('#input').text());
+					}
 				});
 		</script>
 	</head>
 
-	<div contenteditable="true">
-		<span id='content'>Content</span>
-	</div>
+	<div id="input" contenteditable="true"></div>
+
+	<div><input id="command" type="text" name="command"></div>
+
+	<div id="output"></div>
 
 </html>
