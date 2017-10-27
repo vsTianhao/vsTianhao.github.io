@@ -4,7 +4,11 @@
 		<meta charset="UTF-8">
 		<title>Tian Hao CodeFactory</title>
 		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/zui.min.css">
+		<link rel="stylesheet" href="css/zui-theme.min.css">
 		<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+		<script type="text/javascript" src="js/zui.min.js"></script>
 		<script type="text/javascript" src="js/common-1.0.js"></script>
 		<script type="text/javascript">
 				console.log('init');
@@ -16,7 +20,7 @@
 					$('#input').change(function () { handle(); });
 
 					var handle = function () {
-						$('#output').html($('#input').text());
+						$('#output').html($('#input').val());
 					}
 				});
 		</script>
@@ -24,7 +28,7 @@
 
 	<div id="input" contenteditable="true"></div>
 
-	<div><input id="command" type="text" name="command"></div>
+	<div><input id="command" type="text" name="command" /></div>
 
 	<div id="output"></div>
 
